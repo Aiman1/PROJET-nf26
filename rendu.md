@@ -24,7 +24,7 @@ On se pose plusieurs questions sur ces données, questions qui vont nécessiter 
 
 ### Table 1 : Partitionnement pour les taux de vote par géographie
 
-On choisit comme clef `(region, departement, circonscription, annee, tour), commune, candidat` pour avoir un partitionnement à tous les niveaux de granularité géographique, par année et par tour. On stocke dans les colonnes le nombre de votes. Cette matérialisation nous permettra de traiter taux de vote et d'abstention pour tous les niveaux de granularité géographique. Cette matérialisation nous permet aussi d'observer 
+On choisit comme clef `(region, departement, annee, tour), circonscription, commune, candidat` pour avoir un partitionnement à tous les niveaux de granularité géographique, par année et par tour. On stocke dans les colonnes le nombre de votes. Cette matérialisation nous permettra de traiter taux de vote et d'abstention pour tous les niveaux de granularité géographique. Cette matérialisation nous permet aussi d'observer 
 
 FIXME ou consolider en supprimer candidat de la clef de tri, et en ayant en colonnes nombre votes exprimés, nombre votes blancs, nombre votes nuls, nombre abstention
 
