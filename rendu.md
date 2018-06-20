@@ -39,3 +39,4 @@ On choisit comme clef `((annee, tour), commune, parti)` pour avoir un partitionn
 On choisit comme clef `((region, departement, circonscription, annee, tour), commune, candidat)` pour avoir un partitionnement à tous les niveaux de granularité géographique, par année et par tour. On stocke dans les colonnes le nombre de votes le nombre de votes et les critères socio-économiques, ce qui nous permet de traiter les taux de vote/abstention en fonction de critères socio-économiques.
 
 ## Méthodes d'analyse
+![](NF26.png)
