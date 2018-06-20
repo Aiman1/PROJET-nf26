@@ -24,18 +24,18 @@ On se pose plusieurs questions sur ces données, questions qui vont nécessiter 
 
 ### Table 1 : Partitionnement pour les taux de vote par géographie
 
-On choisit comme clef `(region, departement, annee, tour), circonscription, commune, candidat` pour avoir un partitionnement à tous les niveaux de granularité géographique, par année et par tour. On stocke dans les colonnes le nombre de votes. Cette matérialisation nous permettra de traiter taux de vote et d'abstention pour tous les niveaux de granularité géographique. Cette matérialisation nous permet aussi d'observer l'évolution de ces taux d'une élection sur l'autre.
+On choisit comme clef `((region, departement, annee, tour), circonscription, commune, candidat)` pour avoir un partitionnement à tous les niveaux de granularité géographique, par année et par tour. On stocke dans les colonnes le nombre de votes. Cette matérialisation nous permettra de traiter taux de vote et d'abstention pour tous les niveaux de granularité géographique. Cette matérialisation nous permet aussi d'observer l'évolution de ces taux d'une élection sur l'autre.
 
 ### Table 2 : Partitionnement pour les scores des mouvements politiques
 
-On choisit comme clef `(departement, annee, tour), parti` pour avoir un partitionnement par département, année et tour. On stocke dans les colonnes le nombre de votes, ce qui nous permet de répondre aux questions sur les scores pour les différents mouvements politiques. La question posée ne concerne pas de variation du score selon la géographie, mais on a quand-même décider de partitionner les données par département afin de pouvoir avoir un aperçu des variations de score en fonction du département. Cette matérialisation nous permet aussi d'observer l'évolution de ces scores d'une élection sur l'autre.
+On choisit comme clef `((departement, annee, tour), parti)` pour avoir un partitionnement par département, année et tour. On stocke dans les colonnes le nombre de votes, ce qui nous permet de répondre aux questions sur les scores pour les différents mouvements politiques. La question posée ne concerne pas de variation du score selon la géographie, mais on a quand-même décider de partitionner les données par département afin de pouvoir avoir un aperçu des variations de score en fonction du département. Cette matérialisation nous permet aussi d'observer l'évolution de ces scores d'une élection sur l'autre.
 
 ### Table 3 : Partitionnement pour les critères socio-économiques en fonction du parti
 
-On choisit comme clef `(annee, tour), commune, parti` pour avoir un partitionnement par année et tour. On stocke dans les colonnes le nombre de votes et les critères socio-économiques associés à la commune, ce qui nous permet de répondre aux questions concernant les profils des électeurs en termes de critères socio-économiques, en fonction du mouvement politique.
+On choisit comme clef `((annee, tour), commune, parti)` pour avoir un partitionnement par année et tour. On stocke dans les colonnes le nombre de votes et les critères socio-économiques associés à la commune, ce qui nous permet de répondre aux questions concernant les profils des électeurs en termes de critères socio-économiques, en fonction du mouvement politique.
 
 ### Table 4 : Partitionnement pour les critères socio-économiques en fonction du vote/abstention
 
-On choisit comme clef `(region, departement, circonscription, annee, tour), commune, candidat` pour avoir un partitionnement à tous les niveaux de granularité géographique, par année et par tour. On stocke dans les colonnes le nombre de votes le nombre de votes et les critères socio-économiques, ce qui nous permet de traiter les taux de vote/abstention en fonction de critères socio-économiques.
+On choisit comme clef `((region, departement, circonscription, annee, tour), commune, candidat)` pour avoir un partitionnement à tous les niveaux de granularité géographique, par année et par tour. On stocke dans les colonnes le nombre de votes le nombre de votes et les critères socio-économiques, ce qui nous permet de traiter les taux de vote/abstention en fonction de critères socio-économiques.
 
 ## Méthodes d'analyse
