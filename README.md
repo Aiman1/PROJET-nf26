@@ -48,4 +48,4 @@ Oral:
 * rapport synthétique de 6 pages (surface totale maximum 3750cm², pour ceux qui pensaient rendre en A3),
 * annexes autorisées, les annexes doivent être courtes, pertinente, mais non essentielles, et chaque annexe doit être référencée par le rapport, du code se fournit en annexe sans se mettre dans un pdf.
 * Vendredi prochain, samedi autorisé.
-
+https://www.overleaf.com/17268425gbyxmyhkpcjq
